@@ -12,7 +12,7 @@ export class AcercaDeComponent {
   
   constructor(public personaService: PersonaService) { }
 
-  ngOnit(): void {
+  ngOnInit(): void {
     this.personaService.getPersona().subscribe(data => {this.persona = data})
   }
 
