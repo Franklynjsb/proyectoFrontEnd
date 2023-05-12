@@ -1,38 +1,41 @@
-.row {
+.row{
     padding: 20px;
 }
 
-div {
-    background-color: #D294FF;
-    background-size: cover;
+img {
+    object-fit: cover;
+}
+
+div{
+    background-color: #a1b5cb;
     text-align: center;
 }
 
-/*FotoDePerfil*/
-@media (min-width: 576px) {
-    #fotodeperfil {
+/*Estilo de la foto de perfil*/
+@media (min-width: 576px){
+    #fotodeperfil{
         position: absolute;
         width: 15%;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px rgb(66, 66, 66);
-        left: 5%;
-        top: 600px;
+        box-shadow: 3px 3px 3px grey;
+        left: 3%;
+        /*top:550px;*/
     }
 }
-@media (max-width: 575px) {
-    #fotodeperfil {
+@media (max-width: 575px){
+    #fotodeperfil{
         position: absolute;
         width: 30%;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px gray;
-        left: 35%;
-        top: 600px;
+        box-shadow: 3px 3px 3px grey;
+        left: 33%;
+        /*top:950px;*/
     }
 }
 
-/*Nombre-etiqueta*/
-#nombre {
+/*etiqueta nombre*/
+#nombre{
     font-weight: bold;
-    margin-top: 40%;
+    margin-top: 30%;
     margin-left: 10px;
 }
