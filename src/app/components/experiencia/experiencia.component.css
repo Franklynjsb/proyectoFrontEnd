@@ -2,9 +2,13 @@
     padding: 20px;
 }
 div {
-    background: #D294FF;
+    background: #0c0d24;
     background-size: cover;
 }
-h1,h3 {
+h1, h2, h3, p {
     display: inline;
+    color: #e7e9e3;
+}
+td{
+    border:none;
 }

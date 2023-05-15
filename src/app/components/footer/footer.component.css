@@ -1,12 +1,15 @@
 .row {
-    background: #D294FF;
+    background: linear-gradient(to bottom,#0d0e24 20%, rgb(74, 32, 81));
     background-size: cover;
 }
 .footer {
-    color: #fefefe;
+    color: #e7e9e3;
     font-size: 14px;
     display: flex;
     flex-direction: column;
     text-align: center;
     box-shadow: 10px 10px 10px #000;
+}
+p {
+    color: #e7e9e3;
 }

@@ -11,8 +11,9 @@
         <table class="table">
             <tbody>
                 <tr *ngFor="let Proyecto of proyecto">
+                    <!--<td><img src={{Proyecto.imgP}} class="img-fluid"alt=""></td>-->
                     <td><h3>{{Proyecto.nombreE}}</h3></td>
-                    <td>{{Proyecto.descripcionE}}</td>
+                    <td><p>{{Proyecto.descripcionE}}</p></td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-dark" routerLink="/editproyecto/{{Proyecto.id}}"><i class="bi bi-pencil-square"></i>Edit</button>
                     </td>

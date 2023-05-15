@@ -10,6 +10,13 @@
                     <label for="descripcionE">Project description</label>
                     <input type="text" class="form-control" id="descripcionE" name="descripcionE" [(ngModel)]="proyecto.descripcionE" required="">
                 </div>
+                <div class="form-group">
+                    <label for="img">Image</label>
+                    <input type="file" class="form-control" id="img" name="img" [(ngModel)]="proyecto.imgP" (change)="uploadImage($event)" accept=".jpg, .jpeg, .png, .PNG">
+                </div>
+                <div class="imagen">
+                    <img [src]="imageService.url" alt="" width="200px">
+                </div>
                 <button class="btn btn-dark">
                     Edit
                 </button>

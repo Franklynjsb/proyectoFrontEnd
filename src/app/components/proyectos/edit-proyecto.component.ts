@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyecto } from 'src/app/model/proyectos';
+import { ImageService } from 'src/app/service/image.service';
 import { SProyectoService } from 'src/app/service/s-proyecto.service';
 
 @Component({
@@ -11,7 +12,7 @@ import { SProyectoService } from 'src/app/service/s-proyecto.service';
 export class EditProyectoComponent implements OnInit {
   proyecto: Proyecto = null;
 
-  constructor(private sProyecto: SProyectoService, private activatedRouter: ActivatedRoute,private router: Router) {}
+  constructor(private sProyecto: SProyectoService, private activatedRouter: ActivatedRoute,private router: Router, public imageService: ImageService) {}
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
@@ -31,5 +32,11 @@ export class EditProyectoComponent implements OnInit {
       alert("Error updating proyect");
       this.router.navigate(['']);
     });
+  }
+
+  uploadImage($event:any) {
+    const id = this.activatedRouter.snapshot.params['id'];
+    const name = "proyecto_"+id;
+    this.imageService.uploadImage($event, name);
   }
 }
