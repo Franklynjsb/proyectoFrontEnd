@@ -1,15 +1,27 @@
 <div class="row">
-    <h1>Proyectos Realizados</h1>
-    <div class="container">
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-            <h1>Proyecto 1</h1>
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat, laboriosam itaque eius libero dolores voluptates minus, 
-                nihil tempora nostrum magnam architecto! Molestiae hic illum doloremque cum excepturi, cupiditate beatae quaerat!
-            </p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-            <img src="../../../assets/PorjectRunning.jpg" class="img-fluid img-proyectos" alt="">
-        </div>
+    <h1>Proyects</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/newProyecto" *ngIf="isLogged">
+            New Proyect
+        </button>
     </div>
+
+    <div class="col-lg-1 col-md-1 col-sm-1"></div>
+    <div class="col-lg-11 col-md-11 col-sm-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyecto of proyecto">
+                    <td><h3>{{Proyecto.nombreE}}</h3></td>
+                    <td>{{Proyecto.descripcionE}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-dark" routerLink="/editproyecto/{{Proyecto.id}}"><i class="bi bi-pencil-square"></i>Edit</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-dark" (click)="delete(Proyecto.id)"><i class="bi bi-file-earmark-x"></i>Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
 </div>
