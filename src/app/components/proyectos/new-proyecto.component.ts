@@ -23,15 +23,15 @@ export class NewProyectoComponent implements OnInit {
 
   onCreate(): void {
     const proyecto = new Proyecto(this.nombreE, this.descripcionE, this.imgP);
-    this.sProyecto.save(proyecto).subscribe({
-      next:data => {
+    this.sProyecto.save(proyecto).subscribe(
+      data => {
         alert("Proyect saved");
         this.router.navigate(['']);
-      }, error: err => {
+      }, err => {
         alert("Error saving proyect");
         this.router.navigate(['']);
       }
-    });
+    );
   }
   uploadImage($event:any) {
     const id = this.activatedRouter.snapshot.params['id'];

@@ -31,13 +31,13 @@ export class HysComponent implements OnInit {
 
   delete(id: number) {
     if(id != undefined) {
-      this.skillS.delete(id).subscribe({
-        next: data => {
+      this.skillS.delete(id).subscribe(
+        data => {
           this.cargarSkills();
-        }, error: err => {
+        }, err => {
           alert("Error deleting");
         }
-      });
+      );
     }
   }
 }
