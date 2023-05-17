@@ -31,13 +31,14 @@ export class EditAcercaDeComponent implements OnInit {
     const id = this.activatedRouter.snapshot.params['id'];
     this.persona.img = this.imageService.url;
     
-    this.personaService.update(id, this.persona).subscribe(
-      data => {
+    this.personaService.update(id, this.persona).subscribe({
+      next:data => {
         this.router.navigate(['']);
-      }, err => {
+      },error: err => {
         alert("Error updating user");
         this.router.navigate(['']);
-      });
+      }
+    });
   }
 
   uploadImage($event:any) {

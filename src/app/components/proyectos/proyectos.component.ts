@@ -30,10 +30,12 @@ export class ProyectosComponent implements OnInit{
 
   delete(id?: number){
     if(id != undefined){
-      this.sProyecto.delete(id).subscribe(data => {
-        this.cargarProyecto();
-      }, err => {
-        alert("Error deleting proyect");
+      this.sProyecto.delete(id).subscribe({
+        next: data => {
+          this.cargarProyecto();
+        }, error: err => {
+          alert("Error deleting proyect");
+        }
       });
     }
   }

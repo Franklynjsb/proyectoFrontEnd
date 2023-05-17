@@ -10,5 +10,5 @@ export const environment = {
     measurementId: 'G-FWTVP6SPQD',
   },
     production: true,
-    URL: 'https://backendportfolio-y1ee.onrender.com/'
+    URL: 'http://backendportfolio-y1ee.onrender.com/'
   };
